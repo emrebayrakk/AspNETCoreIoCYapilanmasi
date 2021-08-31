@@ -23,8 +23,7 @@ namespace AspNETCoreIoCYapilanmasi.Controllers
         {
             //new operatörü ile ilgili serviceslerden nesne üretiliyorsa bağımlılık yaratılmış olur ve değişiklik olduğu takdirde kaynak kodda tekrar değişikliğe gidilmesi gerekilir.
 
-            ConsoleLog cnlLog = new ConsoleLog(); 
-            cnlLog.Log();
+           
             return View();
         }
 
