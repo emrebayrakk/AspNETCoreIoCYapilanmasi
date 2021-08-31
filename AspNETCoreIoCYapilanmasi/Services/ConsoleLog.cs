@@ -13,6 +13,10 @@ namespace AspNETCoreIoCYapilanmasi.Services
         {
 
         }
-        
+        public void Log()
+        {
+            Console.WriteLine("Console a loglama işlemi gerçekleştirildi..");
+        }
+
     }
 }
