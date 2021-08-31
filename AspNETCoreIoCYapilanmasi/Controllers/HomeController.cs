@@ -7,23 +7,23 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using AspNETCoreIoCYapilanmasi.Services;
+using AspNETCoreIoCYapilanmasi.Services.Interface;
 
 namespace AspNETCoreIoCYapilanmasi.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ILog _log;
+        public HomeController(ILog log)
         {
-            _logger = logger;
+            _log = log;
         }
 
         public IActionResult Index()
         {
             //new operatörü ile ilgili serviceslerden nesne üretiliyorsa bağımlılık yaratılmış olur ve değişiklik olduğu takdirde kaynak kodda tekrar değişikliğe gidilmesi gerekilir.
 
-           
+           _log.Log();
             return View();
         }
 
