@@ -13,22 +13,23 @@ namespace AspNETCoreIoCYapilanmasi.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILog _log;
-        public HomeController(ILog log)
-        {
-            _log = log;
-        }
+        //private readonly ILog _log;
+        //public HomeController(ILog log)
+        //{
+        //    _log = log;
+        //}
 
         public IActionResult Index()
         {
             //new operatörü ile ilgili serviceslerden nesne üretiliyorsa bağımlılık yaratılmış olur ve değişiklik olduğu takdirde kaynak kodda tekrar değişikliğe gidilmesi gerekilir.
 
-           _log.Log();
+           //_log.Log();
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy([FromServices]ILog log) //action bazında nesne talebi FromServices Attribute’u kullanılır.
         {
+            log.Log();
             return View();
         }
 
