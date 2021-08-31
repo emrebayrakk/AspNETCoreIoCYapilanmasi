@@ -49,3 +49,6 @@ Her istek başına bir nesne üretir ve o istek üzerinde olan tüm isteklere o 
 ## Transient
 
 Her istek başına bir nesne üretir ve gönderir 
+
+
+![Kaynak](https://devnot.com/2020/ioc-prensibi-nedir-ornek-proje-ile-kullanimi-ve-avantajlari/)
