@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNETCoreIoCYapilanmasi.Services;
 
 namespace AspNETCoreIoCYapilanmasi.Controllers
 {
@@ -20,6 +21,10 @@ namespace AspNETCoreIoCYapilanmasi.Controllers
 
         public IActionResult Index()
         {
+            //new operatörü ile ilgili serviceslerden nesne üretiliyorsa bağımlılık yaratılmış olur ve değişiklik olduğu takdirde kaynak kodda tekrar değişikliğe gidilmesi gerekilir.
+
+            ConsoleLog cnlLog = new ConsoleLog(); 
+            cnlLog.Log();
             return View();
         }
 
