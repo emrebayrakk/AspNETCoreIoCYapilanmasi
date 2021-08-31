@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AspNETCoreIoCYapilanmasi.Services;
 
 namespace AspNETCoreIoCYapilanmasi
 {
@@ -23,6 +24,19 @@ namespace AspNETCoreIoCYapilanmasi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //services.Add(new ServiceDescriptor(typeof(ConsoleLog), new ConsoleLog())); Default olarak Add ile eklenirse Singleton davranýþýdýr.
+            //services.Add(new ServiceDescriptor(typeof(TextLog), new TextLog()));
+            
+            //services.AddSingleton<ConsoleLog>(); // parametre alan bir constructer ise bu kullanýlmaz/davranýþý sergileyemez 
+            services.AddSingleton<ConsoleLog>(p=>new ConsoleLog(5)); //parametre alan bir constructer ise bu kullanýlabilir.
+
+            services.AddScoped<ConsoleLog>();
+            services.AddScoped<ConsoleLog>(p=>new ConsoleLog(4));
+
+            services.AddTransient<ConsoleLog>();
+            services.AddTransient<ConsoleLog>(p=>new ConsoleLog(3));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
