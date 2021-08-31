@@ -10,7 +10,7 @@ namespace AspNETCoreIoCYapilanmasi.Services
     {
         public void Log()
         {
-
+            Console.WriteLine("Text dosyasına loglama işlemi gerçekleştirildi..");
         }
     }
 }
