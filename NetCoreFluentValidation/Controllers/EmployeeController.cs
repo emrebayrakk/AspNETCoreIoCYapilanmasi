@@ -8,7 +8,7 @@ namespace NetCoreFluentValidation.Controllers
 {
     public class EmployeeController : Controller
     {
-        public IActionResult Embloyee()
+        public IActionResult Employee()
         {
             return View();
         }
