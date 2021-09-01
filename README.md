@@ -1,3 +1,2 @@
-# AspNETCoreIoCYapilanmasi
+# FluentValidation & .Net Core 5.0
 
-![Ioc](/relative/path/to/Ioc.jpg?raw=true "Optional Title")
