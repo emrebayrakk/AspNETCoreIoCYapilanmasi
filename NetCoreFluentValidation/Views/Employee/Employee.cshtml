@@ -1,0 +1,19 @@
+﻿@addTagHelper * ,Microsoft.AspNetCore.Mvc.TagHelpers
+@model NetCoreFluentValidation.Models.Employee
+
+
+<div>
+    <form class="form-group" asp-action="CreatedEmployee" asp-controller="Employee" method="post">
+        <input class="form-control" type="text" asp-for="EmployeeName" placeholder="Çalışanın Adı" />
+        <span style="color:red" asp-validation-for="EmployeeName"></span>
+        <br/>
+        <input class="form-control" type="text" asp-for="EmployeeLastName" placeholder="Çalışanın Soyadı" />
+        <span style="color:red" asp-validation-for="EmployeeLastName"></span>
+        <br/>
+        <input class="form-control" type="email" asp-for="EmployeeEmail" placeholder="E-Mail Adresi" />
+        <span style="color:red" asp-validation-for="EmployeeEmail"></span>
+        <br />
+        
+        <button class="btn btn-primary">Kaydet</button>
+    </form>
+</div>
