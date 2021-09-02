@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using NetCoreFluentValidation.Models;
 
 namespace NetCoreFluentValidation.Controllers
 {
@@ -12,6 +13,21 @@ namespace NetCoreFluentValidation.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult CreatedEmployee()
+        {
+            return View();
+        }
+
+        public IActionResult CreatedEmployee(Employee employee)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(employee);
+            }
+            return View();
+        }
+
 
 
     }
